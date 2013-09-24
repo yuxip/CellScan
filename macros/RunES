@@ -1,0 +1,10 @@
+#!/bin/tcsh
+if ( $# < 2 ) then
+echo "need 2 arguments.."
+exit
+endif
+
+set run = $1
+set nstb = $2
+root -b -q '/home/yuxip/FMS/CellScan/macros/ExportStatus.C('${run}','${nstb}')'
+touch done_${run}_${nstb}.txt

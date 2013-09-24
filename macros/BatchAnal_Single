@@ -1,0 +1,27 @@
+#!/bin/tcsh
+./RunAnal_Single 1 8 0
+./RunAnal_Single 1 11 13
+./RunAnal_Single 1 23 10
+./RunAnal_Single 1 27 1
+./RunAnal_Single 2 2 11
+./RunAnal_Single 2 6 3
+./RunAnal_Single 2 9 8
+./RunAnal_Single 2 9 9
+./RunAnal_Single 2 18 11
+./RunAnal_Single 2 20 13
+./RunAnal_Single 3 4 5
+./RunAnal_Single 3 4 6
+./RunAnal_Single 3 5 5
+./RunAnal_Single 3 6 3
+./RunAnal_Single 3 11 5
+./RunAnal_Single 3 11 7
+./RunAnal_Single 3 16 11
+./RunAnal_Single 3 17 1
+./RunAnal_Single 4 4 4
+./RunAnal_Single 4 4 6
+./RunAnal_Single 4 6 3
+./RunAnal_Single 4 7 6
+./RunAnal_Single 4 18 2
+./RunAnal_Single 4 18 3
+
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=AllHotCells_run12098007.pdf CellAnalysisRun12098007*.pdf

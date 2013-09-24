@@ -1,0 +1,11 @@
+#!/bin/tcsh
+
+if ( $# < 2) then
+echo "need 2 arguments!!"
+exit
+endif
+
+set run = $1
+set sl = $2
+
+root -b -q '/home/yuxip/FMS/CellScan/macros/CombineSingleRun.C('${run}',"'"${sl}"'")'

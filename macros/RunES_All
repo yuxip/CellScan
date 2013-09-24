@@ -1,0 +1,20 @@
+#!/bin/tcsh
+
+#if ( $# < 1 ) then
+#echo "need run number"
+#exit
+#endif
+
+foreach run ( `cat fill15419_remain.txt` )
+echo "processing run${run}"
+#set run = $1
+foreach nstb (1 2 3 4)
+./RunES ${run} ${nstb} 
+while ( ! -e done_${run}_${nstb}.txt )
+sleep 100
+end
+end
+end
+rm -f done_${run}_*.txt
+
+/home/yuxip/FMS/CellScan/status/combine_status ${run}

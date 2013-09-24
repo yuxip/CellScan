@@ -1,0 +1,13 @@
+#!/bin/tcsh
+if( $# < 3 ) then
+echo "need 3 arguments"
+exit
+endif
+
+set run = 12098007
+set nstb = $1
+set row = $2
+set col = $3
+echo "Processing Cellr${row}_c${col}_n${nstb}"
+
+root -b -q '/home/yuxip/FMS/CellScan/macros/AnalyzeCell_Single.C('${run}','${nstb}','${row}','${col}')'

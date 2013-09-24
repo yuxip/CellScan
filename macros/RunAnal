@@ -1,0 +1,11 @@
+#!/bin/tcsh
+
+if( $# < 2 )then
+echo "need run number! and small/large"
+exit
+endif
+
+set runnum = $1
+set sl = $2
+#set logfile = /home/yuxip/FMS/CellScan/macro/logana_${runnum}.txt
+root -b -q AnalyzeCell.C'('${runnum}',"'${sl}'")'

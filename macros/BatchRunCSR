@@ -1,0 +1,21 @@
+#!/bin/tcsh
+./RunCSR 12098014 large
+./RunCSR 12098016 large
+./RunCSR 12098017 large
+./RunCSR 12098018 large
+./RunCSR 12098019 large
+./RunCSR 12098020 large
+./RunCSR 12098021 large
+./RunCSR 12098022 large
+./RunCSR 12098030 large
+./RunCSR 12098031 large
+./RunCSR 12098014 small
+./RunCSR 12098016 small
+./RunCSR 12098017 small
+./RunCSR 12098018 small
+./RunCSR 12098019 small
+./RunCSR 12098020 small
+./RunCSR 12098021 small
+./RunCSR 12098022 small
+./RunCSR 12098030 small
+./RunCSR 12098031 small
